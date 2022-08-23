@@ -312,7 +312,13 @@ main {
   padding-block: clamp(1rem, 3vw, 6rem);
 }
 .logo {
-  inline-size: clamp(128px, 2vw, 250px);
+  inline-size: clamp(128px, 18vw, 500px);
+  margin-block-end: clamp(1rem, 3vw, 3rem);
+}
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: clamp(1rem, 3vw, 3rem);
 }
 .box {
   border-radius: var(--radius-3x);
@@ -320,18 +326,28 @@ main {
   display: inline-flex;
   padding: clamp(1rem, 3vw, 6rem);
   margin: 0;
+  flex-direction: column;
+  gap: 1rem;
 }
 .box--secondary {
   background-color: var(--box-bg);
 }
-.box + .box {
-  margin: 1rem;
-}
-.box p {
+.box p,
+.box address {
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+.box address {
+  gap: 0.2rem;
+  font-style: normal;
+}
+.box b {
+  display: block;
+}
+.box a {
+  color: var(--text-primary-color);
 }
 
 /*# sourceMappingURL=index.css.map */

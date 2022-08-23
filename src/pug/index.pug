@@ -5,13 +5,25 @@ block prepend title
 
 block content
     main
-        img.logo(src="./img/logo.svg")
-        h1 SW SIMS safety
-        .box 
-            p 
-                b IČ0
-                span 28648803
-        .box.box--secondary
-            p 
-                b Schránka
-                span zw9x6cy
+        img.logo(src="./img/logo-with-text.svg")
+        //h1 SW SIMS safety, s.r.o.
+        .boxes
+            .box 
+                p 
+                    b IČ0
+                    span 28648803
+            .box
+                p 
+                    b Schránka
+                    span zw9x6cy
+            .box
+                p 
+                    b Adresa
+                    address
+                        span Na Výsluní 477
+                        br
+                        span 783 61 Hlubočky
+            .box
+                p 
+                    b E-mail
+                    a(href="mailto: info@sims.cz") info@sims.cz
