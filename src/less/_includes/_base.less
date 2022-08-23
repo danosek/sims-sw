@@ -1,0 +1,70 @@
+html {
+  color: var(--text-primary-color);
+  background-color: var(--site-bg);
+  font-family: var(--font-stack);
+  box-sizing: border-box;
+  font-size: var(--font-size-base);
+  scroll-behavior: smooth;
+  color-scheme: dark light;
+  min-inline-size: 320px;
+  //word-spacing: -0.1em;
+  letter-spacing: 0.01em;
+  font-size: 18px;
+}
+
+body {
+  .font-base();
+  background-color: inherit;
+}
+
+:is(*, *::before, *::after) {
+  box-sizing: inherit;
+}
+
+ul {
+    //--list-marker: "— ";
+    list-style: none outside;
+    padding-inline-start: 0;
+    
+    // li::before {
+    //   content: var(--list-marker);
+    // }
+}
+
+mark {
+  --alpha: 0.2;
+  background-color: var(--mark-bg);
+  //padding: var(--tag-padding);
+  //border-radius: var(--radius);
+  color: var(--text-pure);
+}
+
+blockquote {
+  margin-inline: 0;
+  padding-inline: 2rem;
+  //color: var(--text-secondary-color);
+  border-inline-start: var(--border-width) solid var(--divider);
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+}
+
+::selection {
+  background-color: var(--selection-bg);
+}

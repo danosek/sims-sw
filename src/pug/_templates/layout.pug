@@ -1,0 +1,56 @@
+//- layout.pug
+
+doctype html
+
+html(lang="cs")
+  head
+
+    //- Outdated browser detection
+    //- <script src="./js/outdated-browser-rework.js" type="application/javascript"></script>
+    //- script.
+    //-   outdatedBrowserRework({
+    //-     browserSupport: {
+    //-       'Chrome': 58,
+    //-       'Edge': 16,
+    //-       'Safari': 10.1,
+    //-       'Mobile Safari': 10.3,
+    //-       'Firefox': 54,
+    //-       'Opera': 44,
+    //-       'IE': false
+    //-     },
+    //-     isUnknownBrowserOK: true
+    //-   });
+
+    block title
+      title SW SIMS safety #{title}
+
+    block meta
+      meta(charset="utf-8")
+      meta(name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
+      meta(http-equiv="X-UA-Compatible" content="IE=edge")
+      meta(name="description" content="Toto bude popopis společnosti")
+      meta(name="author" content="SW SIMS safety")
+      meta(property="og:site_name" content="SW SIMS safety")
+      meta(property="og:title" content="SW SIMS safety")
+      meta(property="og:description" content="Ahoj. My name is Daniel. I'm a Czech designer. Software is my canvas.")
+      meta(property="og:url" content="http://hruska.design/")
+      meta(property="og:image" content="http://hruska.design/img/daniel-hruska.jpeg")
+      meta(property="og:image:width" content="1201")
+      meta(property="og:image:height" content="630")
+      meta(name="color-scheme" content="dark light")
+      link(rel="icon" href="img/favicon.svg" type="image/svg+xml")
+      link(rel="icon" href="../img/favicon-lt.svg" type="image/svg+xml" media="(prefers-color-scheme: light)")
+      link(rel="icon" href="../img/favicon.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)")
+      link(rel="mask-icon" href="../img/favicon.svg" type="image/svg+xml" color="#F48525" media="(prefers-color-scheme: light)")
+      link(rel="mask-icon" href="../img/favicon.svg" type="image/svg+xml" color="#D76909" media="(prefers-color-scheme: dark)")
+
+    block styles
+      link(rel="stylesheet" type="text/css" href="css/index.css")
+
+    block scripts
+   
+  body
+
+    block content
+
+    block body-scripts

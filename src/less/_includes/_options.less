@@ -1,0 +1,31 @@
+:root {
+    /* Typography */
+    --font-stack: "Plus Jakarta Sans", system-ui, sans-serif;
+    --font-stack-headings: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-stack-mono: 'IBM Plex Mono', monospace;
+    --container-size: 1600px;
+
+    /* Sharpiness */
+    --radius: 4px;
+    --radius-2x: 8px;
+    --radius-3x: 20px;
+
+    /* Spacing */
+    --edge-s: 1rem;
+    --edge-l: 4rem;
+    --edge: var(--edge-s);
+
+    --tag-padding: 0 0.2ch;
+    --tag-margin: 0 -0.2ch;
+
+    --header-height: 3rem;
+    
+    /* Border */
+    --border-width: 2px;
+    --border-style: dashed;
+    
+    @media only screen and (min-width: 900px) {
+        --edge: var(--edge-l);
+        --header-height: 4rem;
+    }
+}

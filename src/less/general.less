@@ -1,0 +1,40 @@
+:root {
+    --container-size: 1600px;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    inline-size: ~"min(calc(100% - var(--edge)), calc(var(--container-size) - var(--edge)))";
+    margin-inline: auto;
+    padding-block: clamp(1rem, 3vw, 6rem);
+}
+
+.logo {
+    inline-size: clamp(128px, 2vw, 250px);
+}
+
+.box {
+    border-radius: var(--radius-3x);
+    background-color: var(--card-bg);
+    display: inline-flex;
+    padding: clamp(1rem, 3vw, 6rem);
+    margin: 0;
+
+    &--secondary {
+        background-color: var(--box-bg);
+    }
+
+    & + & {
+        margin: 1rem;
+    }
+    
+    p {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

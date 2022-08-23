@@ -1,0 +1,136 @@
+﻿@import (reference) "./_colors-palette.less";
+
+:where(:root, *) {
+    // Generated pallete
+
+    --alpha-1 : 0.1;
+    --alpha-2 : 0.2;
+    --alpha-3 : 0.4;
+    --alpha-4 : 0.6;
+    --alpha-5 : 0.8;
+    --alpha: 1;
+
+    --orange--base: ~"@{fifty__orange--base}";
+    --indigo--base: ~"@{fifty__indigo--base}";
+
+    @media @light {
+        --orange--base: ~"@{sixty__orange--base}";
+        --indigo--base: ~"@{sixty__indigo--base}";
+    }
+
+    // Orange
+
+    --orange: ~"hsl(var(--orange--base))";
+	--orange-a: ~"hsl(var(--orange--base) / var(--alpha))";
+
+    --orange--10 : @orange--10;
+    --orange--20 : @orange--20;
+    --orange--30 : @orange--30;
+    --orange--40 : @orange--40;
+    --orange--50 : @orange--50;
+    --orange--60 : @orange--60;
+    --orange--70 : @orange--70;
+    --orange--80 : @orange--80;
+    --orange--90 : @orange--90;
+    --orange--100: @orange--100;
+
+    // indigo
+
+    --indigo: ~"hsl(var(--indigo--base))";
+	--indigo-a: ~"hsl(var(--indigo--base) / var(--alpha))";
+
+    --indigo--10 : @indigo--10;
+    --indigo--20 : @indigo--20;
+    --indigo--30 : @indigo--30;
+    --indigo--40 : @indigo--40;
+    --indigo--50 : @indigo--50;
+    --indigo--60 : @indigo--60;
+    --indigo--70 : @indigo--70;
+    --indigo--80 : @indigo--80;
+    --indigo--90 : @indigo--90;
+    --indigo--100: @indigo--100;
+    
+    // blue
+
+    --blue: ~"hsl(var(--blue--base))";
+	--blue-a: ~"hsl(var(--blue--base) / var(--alpha))";
+
+    --blue--10 : @blue--10;
+    --blue--20 : @blue--20;
+    --blue--30 : @blue--30;
+    --blue--40 : @blue--40;
+    --blue--50 : @blue--50;
+    --blue--60 : @blue--60;
+    --blue--70 : @blue--70;
+    --blue--80 : @blue--80;
+    --blue--90 : @blue--90;
+    --blue--100: @blue--100;
+
+    // green
+
+    --green: ~"hsl(var(--green--base))";
+	--green-a: ~"hsl(var(--green--base) / var(--alpha))";
+
+    --green--10 : @green--10;
+    --green--20 : @green--20;
+    --green--30 : @green--30;
+    --green--40 : @green--40;
+    --green--50 : @green--50;
+    --green--60 : @green--60;
+    --green--70 : @green--70;
+    --green--80 : @green--80;
+    --green--90 : @green--90;
+    --green--100: @green--100;
+
+
+    // Grey
+
+    --grey--10 : @grey--10;
+    --grey--20 : @grey--20;
+    --grey--30 : @grey--30;
+    --grey--40 : @grey--40;
+    --grey--50 : @grey--50;
+    --grey--60 : @grey--60;
+    --grey--70 : @grey--70;
+    --grey--80 : @grey--80;
+    --grey--90 : @grey--90;
+    --grey--100: @grey--100;
+
+    // Primary
+
+    --primary--10 : ~"var(--@{branding-primary}--10)";
+    --primary--20 : ~"var(--@{branding-primary}--20)";
+    --primary--30 : ~"var(--@{branding-primary}--30)";
+    --primary--40 : ~"var(--@{branding-primary}--40)";
+    --primary--50 : ~"var(--@{branding-primary}--50)";
+    --primary--60 : ~"var(--@{branding-primary}--60)";
+    --primary--70 : ~"var(--@{branding-primary}--70)";
+    --primary--80 : ~"var(--@{branding-primary}--80)";
+    --primary--90 : ~"var(--@{branding-primary}--90)";
+    --primary--100: ~"var(--@{branding-primary}--100)";
+
+    --primary: ~"hsl(var(--@{branding-primary}--base))";
+	--primary-a: ~"hsl(var(--@{branding-primary}--base) / var(--alpha))";
+
+    // Secondary
+
+    --secondary--10 : ~"var(--@{branding-secondary}--10)";
+    --secondary--20 : ~"var(--@{branding-secondary}--20)";
+    --secondary--30 : ~"var(--@{branding-secondary}--30)";
+    --secondary--40 : ~"var(--@{branding-secondary}--40)";
+    --secondary--50 : ~"var(--@{branding-secondary}--50)";
+    --secondary--60 : ~"var(--@{branding-secondary}--60)";
+    --secondary--70 : ~"var(--@{branding-secondary}--70)";
+    --secondary--80 : ~"var(--@{branding-secondary}--80)";
+    --secondary--90 : ~"var(--@{branding-secondary}--90)";
+    --secondary--100: ~"var(--@{branding-secondary}--100)";
+    
+    --secondary: ~"hsl(var(--@{branding-secondary}--base))";
+	--secondary-a: ~"hsl(var(--@{branding-secondary}--base) / var(--alpha))";
+
+    // BW
+
+    --white: #FFFFFF;
+    --black: #000000;
+
+}
