@@ -1,0 +1,44 @@
+extends _templates/layout.pug
+
+block prepend title
+    title Principles of personal data processing - SW SIMS safety
+
+block append styles 
+    style.
+        :root {
+            --container-size: 60ch;
+            line-height: 1.7
+        }
+
+        li + li {
+            margin-block-start: 1rem;
+        }
+
+        h1 {
+            line-height: 1.1
+        }
+
+        
+
+block content
+    main
+        h1 Principles of personal data processing
+
+        p Our company SW SIMS safety, s.r.o. (hereinafter the company) with registered office at Na Výsluní 477, 783 61 Hlubočky, registered in the commercial register maintained by the Regional Court in Ostrava, C 45129/KSOS, hereby informs you about the manner and extent of processing personal data and user data. When processing personal data, it proceeds in accordance with the following legal regulations:
+
+        ul
+            li Regulation of the European Parliament and the EU Council 2016/679 of 27/04/2016 on the protection of natural persons in connection with the processing of personal data and on the free movement of such data, which entered into force on 25/05/2018 (hereinafter GDPR).
+
+            li Act No. 110/2019 Coll., on the processing of personal data of 12/03/2019, which entered into force on 24/04/2019, replaced Act No. 101/2000 Coll. on the protection of personal data.
+
+            li Act on Certain Information Society Services No. 480/2004 Coll.
+
+            li Civil Code No. 89/2012 Coll.
+
+            li Alternatively, in accordance with other regulations.
+
+        p We store and process personal data within the EU and at the same time take the necessary steps to ensure the correct handling and storage of personal data.
+
+        p Our company processes personal data (name, surname, email, phone number) when creating a new user account, which the user logs into the application with. The user can cancel his user account at any time and all personal data will be deleted from the database.
+
+        p We also receive data on our cloud server in the form of messages from various security devices (EZS, PZS, communicators, ...) for the purpose of guarding property.
