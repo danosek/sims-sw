@@ -7,6 +7,8 @@
   --alpha: 1;
   --orange--base: 28 90% 55%;
   --indigo--base: 230 90% 66%;
+  --blue--base: 212 100% 60%;
+  --green--base: 145 54% 55%;
   --orange: hsl(var(--orange--base));
   --orange-a: hsl(var(--orange--base) / var(--alpha));
   --orange--10: hsl(28, 55%, 96%);
@@ -96,6 +98,8 @@
   :where(:root, *) {
     --orange--base: 28 92% 44%;
     --indigo--base: 230 75% 58%;
+    --blue--base: 216 91% 59%;
+    --green--base: 145 55% 49%;
   }
 }
 :where(:root, *) {
@@ -282,6 +286,9 @@ main {
 .logo {
   inline-size: clamp(128px, 18vw, 500px);
   margin-block-end: clamp(1rem, 3vw, 3rem);
+}
+a[href] {
+  color: var(--primary);
 }
 .boxes {
   display: grid;

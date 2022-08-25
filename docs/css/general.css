@@ -13,6 +13,9 @@ main {
   inline-size: clamp(128px, 18vw, 500px);
   margin-block-end: clamp(1rem, 3vw, 3rem);
 }
+a[href] {
+  color: var(--primary);
+}
 .boxes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
