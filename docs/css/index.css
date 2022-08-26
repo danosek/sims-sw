@@ -293,6 +293,7 @@ a[href] {
 .boxes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-auto-rows: 15ch;
   gap: clamp(1rem, 3vw, 3rem);
 }
 .box {
