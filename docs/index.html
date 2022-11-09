@@ -22,33 +22,106 @@
     <link rel="mask-icon" href="../img/favicon.svg" type="image/svg+xml" color="#F48525" media="(prefers-color-scheme: light)">
     <link rel="mask-icon" href="../img/favicon.svg" type="image/svg+xml" color="#D76909" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/homepage.css">
   </head>
   <body>
-    <main><img class="logo" src="./img/logo-with-text.svg">
-      <!--h1 SW SIMS safety, s.r.o.-->
-      <p>Na nových stránkách aktuálně pracujeme 🚧 👋 </p><br>
-      <div class="boxes">
-        <div class="box"> 
+    <main>
+      <!-- Header-->
+      <header> 
+        <nav><a href="./index.html"><img class="logo" src="./img/logo-with-text.svg"></a><a href="#sims">SIMS</a><a href="#eniterm">Eniterm</a><a href="#contact">Kontakt</a></nav>
+      </header>
+      <p class="company-intro">Jsme česká firma, která se od roku 1991 zabývá vývojem komunikačních služeb a informačních systémů pro monitorování elektronických bezpečnostních zařízení. </p>
+      <!-- SIMS-->
+      <h2 id="sims">SIMS</h2>
+      <p>
+        Naším hlavním produktem je Security Information Monitoring System (SIMS), který přijímá zprávy z elektronických bezpečnostních zařízení jako EZS, PZS, bezpečnostní komunikátory a další.
+        Zprávy zpracovává a zapisuje do databáze. Zákazník má pak na výběr, který informační systém si pro monitorování zvolí. 
+        
+      </p>
+      <products>
+        <product>
+          <h3>SIMS Standard</h3>
+          <p>
+            Komplexní monitorovací systém určený pro bezpečnostní agentury, které připojují na PCO (pulty centrální ochrany) stovky až tisíce střežených objektů.
+            Díky jednoduchému ovládání a propracovanému systému dokáže operátor velice rychle odbavovat přijaté poplachy, které se třídí dle jejich významu.
+            Systém disponuje množstvím funkcionalit, které usnadňují práci operátorům, ale i vedoucím pracovníkům. 
+            
+          </p>
+        </product>
+        <product>
+          <h3>SIMS Web</h3>
+          <p>
+            Webová aplikace, která poskytuje monitorování střežených objektů. Tento produkt je nejlepší variantou pro
+            dohledy, vrátnice, koncové zákazníky, kteří nepotřebují nic jiného, než zařízení (ideálně PC nebo tablet s připojením k internetu)
+            s webovým prohlížečem. Aplikace běží ve všech podporovaných verzí webových prohlížečů
+            
+          </p>
+        </product>
+        <product>
+          <h3>SIMS Mobile</h3>
+          <p>
+            Mobilní aplikace monitorující elektronická bezpečnostní zařízení s možností ovládat výstupy M2M Easy 2
+            bezpečnostních komunikátorů ze svého mobilního telefonu nebo tabletu. Tento produkt je ideální variantou pro koncové zákazníky
+            jako jsou majitelé střežených objektů, kteří chtějí mít svoje objekty pod stálou kontrolou. Nezávisle na tom, jestli mají své
+            objekty hlídané bezpečnostní agenturou anebo si je pomocí naší aplikace hlídají sami.
+            
+          </p>
+        </product>
+      </products>
+      <product-comparison>
+        <!--p Porovnejte funkčnost všech edicí a zjistěte, která je pro vás ta pravá.--><a href="comparison.html">Porovnat</a>
+      </product-comparison>
+      <cloud-vs-local>
+        <h4>Cloud vs lokální úložiště</h4>
+        <p>
+          Našim zákazníkům nabízíme možnost provozovat SIMS spřipojením na náš cloudový server (SIMSWEB.CZ) nebo lokálně na svém serveru.
+          Stejně tak služby (produktu Eniterm) můžou být instalovány na našem komunikačním serveru (SIMSWEB.EU) nebo na serveru zákazníka.
+        </p>
+        <p>
+          Výhodou provozu SIMS na našem cloudovém serveru je, že zákazník si nemusí pořizovat vlastní server s licencí Microsoft
+          SQL Server a nemusí se starat o správu a údržbu databáze. Na cloud serveru má zákazník také k dispozici webovou aplikaci (produkt SIMS Web).
+        </p>
+        <p>
+          Ideální variantou je mít jeden server jako hlavní a druhý používat jako záložní a zprávy zapisovat na oba servery současně.
+          V případě výpadku jednoho ze serverů není zákazník nějak omezen a pracuje nerušeně dál na druhém serveru.
+          
+        </p>
+      </cloud-vs-local>
+      <!-- Eniterm-->
+      <h2 id="eniterm">Eniterm</h2>
+      <p>
+        Eniterm je aplikace pomocí které se instalují, konfigurují a spouští služby, které přijímají zprávy z elektronických bezpečnostních zařízení střežených objektů.
+        Eniterm obsahuje ovladače téměř všech nejčastěji používaných bezpečnostních systémů a komunikátorů. Díky tomu jsme schopni přijímat zprávy ze zařízení různých výrobců.
+        
+      </p>
+      <!-- Contact-->
+      <h2 id="contact">Kontakt</h2>
+      <boxes>
+        <box>
+          <p>SW SIMS safety, s.r.o.</p>
+        </box>
+        <box> 
           <p> <b>IČO</b><span>28648803</span></p>
-        </div>
-        <div class="box">
+        </box>
+        <box>
           <p> <b>Schránka</b><span>zw9x6cy</span></p>
-        </div>
-        <div class="box">
+        </box>
+        <box>
           <p> <b>Adresa</b>
             <address><span>Na Výsluní 477</span><span>783 61 Hlubočky</span></address>
           </p>
-        </div>
-        <div class="box">
+        </box>
+        <box>
           <p> <b>E-mail</b><a href="mailto:info@sims.cz">info@sims.cz</a></p>
-        </div>
-        <div class="box">
+        </box>
+        <box>
           <p> <b>Telefon</b><a href="tel:+420602748687">+420&nbsp;602&nbsp;748&nbsp;687</a></p>
-        </div>
-        <div class="box">
-          <p> <b><a href="principles.html">Principles of personal data processing</a></b></p>
-        </div>
-      </div>
+        </box>
+      </boxes>
+      <footer> 
+        <p> <a href="principles.html">Principles of personal data processing</a></p>
+        <p> <span id="copyright"> </span><span>&ensp;© SIMS SW s.r.o</span><script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></p>
+      </footer>
     </main>
   </body>
 </html>

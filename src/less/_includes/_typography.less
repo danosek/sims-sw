@@ -13,6 +13,15 @@
 	src: local("IBM Plex Mono"), local("IBMPlexMono"), url("../fonts/ibm-plex-mono.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "Inter";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/inter.woff2?v=3.19") format("woff2") tech("variations"),
+       url("../fonts/inter.woff2?v=3.19") format("woff2-variations");
+}
+
 
 // Scale generator
 
@@ -64,7 +73,7 @@
   font-family: var(--font-stack-headings);
   font-size: var(--font-size-xxxl);
   font-weight: var(--heading-weight);
-  letter-spacing: -0.03ch;
+  letter-spacing: -0.05ch;
   font-feature-settings: var(--heading-features);
 }
 
@@ -72,7 +81,7 @@
   font-family: var(--font-stack-headings);
   font-size: var(--font-size-xxl);
   font-weight: var(--heading-weight);
-  letter-spacing: -0.025ch;
+  letter-spacing: -0.04ch;
   font-feature-settings: var(--heading-features);
 }
 
@@ -80,7 +89,7 @@
   font-family: var(--font-stack-headings);
   font-size: var(--font-size-xl);
   font-weight: var(--heading-weight);
-  letter-spacing: -0.02ch;
+  letter-spacing: -0.03ch;
   font-feature-settings: var(--heading-features);
 }
 
@@ -143,11 +152,11 @@
   // https://www.fluid-type-scale.com/
   --font-size-s: clamp(0.9rem, -0.2vw + 0.9rem, 0.9rem);
   --font-size-base: clamp(1rem, 0.2vw + 1rem, 1.1rem);
-  --font-size-l: clamp(1.2rem, 0.8vw + 1.1rem, 1.8rem);
-  --font-size-xl: clamp(1.4rem, 2.1vw + 1.1rem, 2.9rem);
-  --font-size-xxl: clamp(1.7rem, 4.2vw + 1rem, 4.7rem);
-  --font-size-xxxl: clamp(2.1rem, 7.8vw + 0.7rem, 7.6rem);
-  --font-size-mega: clamp(2.5rem, 13.8vw + 0rem, 9.3rem);
+  --font-size-l: clamp(1.2rem, 0.8vw + 1.1rem, 1.5rem);
+  --font-size-xl: clamp(1.4rem, 2.1vw + 1.1rem, 2.5rem);
+  --font-size-xxl: clamp(1.7rem, 3.2vw + 1rem, 4rem);
+  --font-size-xxxl: clamp(2.1rem, 6.8vw + 0.7rem, 6rem);
+  --font-size-mega: clamp(2.5rem, 9.8vw + 0rem, 7.3rem);
  
   /* Line height */
   --line-height-text: 1.55;
@@ -158,7 +167,7 @@
   --heading-weight: 650;
   --text-weight: 400;
   --heading-features: "ss03";
-  font-feature-settings: none;
+  font-feature-settings: initial;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -169,15 +178,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	.heading-xxl();
+	.heading-xxxl();
 }
 
 h2 {
-	.heading-xl();
+	.heading-xxxl();
 }
 
 h3 {
-	.heading-l();
+	.heading-xl();
 }
 
 h4 {

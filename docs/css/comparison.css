@@ -1,0 +1,29 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table th,
+table td {
+  padding: 0.5rem 0.75rem;
+}
+table th {
+  font-family: var(--font-stack-headings);
+  font-size: var(--font-size-l);
+  font-weight: var(--heading-weight);
+  letter-spacing: -0.015ch;
+  font-feature-settings: var(--heading-features);
+}
+table td {
+  border: 2px solid var(--text-primary-color);
+}
+table td:not(:first-child) {
+  text-align: center;
+  inline-size: 9rem;
+  color: var(--primary);
+}
+table td[colspan] {
+  padding-block: 1rem;
+  border-inline-color: transparent;
+}
+
+/*# sourceMappingURL=comparison.css.map */

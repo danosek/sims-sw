@@ -1,0 +1,150 @@
+extends _templates/layout.pug
+
+block prepend title
+    title Porovnání - SW SIMS safety
+
+block append styles
+    link(rel="stylesheet" type="text/css" href="css/comparison.css")
+        
+block content
+    main
+        header 
+            nav
+                a(href="./index.html")
+                    img.logo(src="./img/logo-with-text.svg")
+                a(href="./index.html") ↩ Zpět domů
+
+            h1 Porovnání edicí SIMS
+
+            table 
+                thead
+                    th 
+                    th Standard
+                    th Web
+                    th Mobile 
+                tbody
+                    tr
+                        td Zavádění objektů do systému
+                        td ●
+                        td ●
+                        td ●
+                    tr
+                        td Příjem zpráv
+                        td ●
+                        td ●
+                        td ●
+                    tr
+                        td Historie a filtr zpráv
+                        td ●
+                        td ●
+                        td ●
+                    tr
+                        td Obsluhy poplachových zpráv
+                        td ●
+                        td ●
+                        td ●
+                    tr
+                        td PCO
+                        td ●
+                        td 
+                        td
+                    tr
+                        td Střežené objekty (koncová zařízení)
+                        td ●
+                        td ○
+                        td ○
+                    tr
+                        td Přenosové formáty / Události formátů / Události
+                        td ●
+                        td 
+                        td
+                    tr
+                        td Skupiny
+                        td ●
+                        td 
+                        td
+                    tr
+                        td Atributy
+                        td ●
+                        td 
+                        td
+                    tr
+                        td Uživatelé
+                        td ●
+                        td 
+                        td ○
+                    tr
+                        td Kontakty
+                        td ●
+                        td ●
+                        td ●
+                    tr
+                        td Číselné kódy
+                        td ●
+                        td ●
+                        td ●
+                    tr
+                        td Ovládání výstupů (M2M)
+                        td 
+                        td 
+                        td ●
+                    tr
+                        td SMS 
+                        td ●
+                        td 
+                        td
+                    tr
+                        td E-maily 
+                        td ●
+                        td 
+                        td
+                    tr
+                        td Plánovač
+                        td ●
+                        td 
+                        td
+                    tr
+                        td Evidence výjezdovek
+                        td ●
+                        td 
+                        td
+                    tr
+                        td Otevírací doba / Limity / Limity obnovy 
+                        td ●
+                        td 
+                        td
+                    tr
+                        td Události SMS
+                        td ●
+                        td 
+                        td
+                    tr
+                        td Periodické tisky 
+                        td ●
+                        td 
+                        td
+                    tr 
+                        td(colspan="4")
+                            b Lokátory
+                    tr
+                        td Poslední známá pozice
+                        td ●
+                        td ●
+                        td ●
+                    tr
+                        td Historie polohy
+                        td ●
+                        td ●
+                        td ○
+                    tr
+                        td Geo zóny
+                        td ●
+                        td ●
+                        td 
+    footer 
+        p 
+            a(href="principles.html") Principles of personal data processing
+        p 
+            span#copyright 
+            span &ensp;© SIMS SW s.r.o
+            <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>

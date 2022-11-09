@@ -42,7 +42,7 @@ articles .no-articles {
   font-family: var(--font-stack-headings);
   font-size: var(--font-size-xl);
   font-weight: var(--heading-weight);
-  letter-spacing: -0.02ch;
+  letter-spacing: -0.03ch;
   font-feature-settings: var(--heading-features);
   margin: 0;
 }
@@ -73,7 +73,7 @@ li a {
   font-family: var(--font-stack-headings);
   font-size: var(--font-size-xl);
   font-weight: var(--heading-weight);
-  letter-spacing: -0.02ch;
+  letter-spacing: -0.03ch;
   font-feature-settings: var(--heading-features);
   --heading-weight: var(--blog-heading-weight);
 }

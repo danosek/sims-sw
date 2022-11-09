@@ -3,36 +3,114 @@ extends _templates/layout.pug
 block prepend title
     title SW SIMS safety
 
+block append styles
+    link(rel="stylesheet" type="text/css" href="css/homepage.css")
+
 block content
     main
-        img.logo(src="./img/logo-with-text.svg")
-        //h1 SW SIMS safety, s.r.o.
-        p Na nových stránkách aktuálně pracujeme 🚧 👋 
-        br
-        .boxes
-            .box 
+
+        // Header
+
+        header 
+            nav
+                a(href="./index.html")
+                    img.logo(src="./img/logo-with-text.svg")
+                a(href="#sims") SIMS
+                a(href="#eniterm") Eniterm
+                a(href="#contact") Kontakt
+
+        p.company-intro Jsme česká firma, která se od roku 1991 zabývá vývojem komunikačních služeb a informačních systémů pro monitorování elektronických bezpečnostních zařízení. 
+
+        // SIMS
+
+        h2#sims SIMS
+
+        p.
+            Naším hlavním produktem je Security Information Monitoring System (SIMS), který přijímá zprávy z elektronických bezpečnostních zařízení jako EZS, PZS, bezpečnostní komunikátory a další.
+            Zprávy zpracovává a zapisuje do databáze. Zákazník má pak na výběr, který informační systém si pro monitorování zvolí. 
+        
+        products
+
+            product
+                h3 SIMS Standard
+                p.
+                    Komplexní monitorovací systém určený pro bezpečnostní agentury, které připojují na PCO (pulty centrální ochrany) stovky až tisíce střežených objektů.
+                    Díky jednoduchému ovládání a propracovanému systému dokáže operátor velice rychle odbavovat přijaté poplachy, které se třídí dle jejich významu.
+                    Systém disponuje množstvím funkcionalit, které usnadňují práci operátorům, ale i vedoucím pracovníkům. 
+
+            product
+                h3 SIMS Web
+                p.
+                    Webová aplikace, která poskytuje monitorování střežených objektů. Tento produkt je nejlepší variantou pro
+                    dohledy, vrátnice, koncové zákazníky, kteří nepotřebují nic jiného, než zařízení (ideálně PC nebo tablet s připojením k internetu)
+                    s webovým prohlížečem. Aplikace běží ve všech podporovaných verzí webových prohlížečů
+
+            product
+                h3 SIMS Mobile
+                p.
+                    Mobilní aplikace monitorující elektronická bezpečnostní zařízení s možností ovládat výstupy M2M Easy 2
+                    bezpečnostních komunikátorů ze svého mobilního telefonu nebo tabletu. Tento produkt je ideální variantou pro koncové zákazníky
+                    jako jsou majitelé střežených objektů, kteří chtějí mít svoje objekty pod stálou kontrolou. Nezávisle na tom, jestli mají své
+                    objekty hlídané bezpečnostní agenturou anebo si je pomocí naší aplikace hlídají sami.
+
+        product-comparison
+            //p Porovnejte funkčnost všech edicí a zjistěte, která je pro vás ta pravá.
+            a(href="comparison.html") Porovnat
+
+        cloud-vs-local
+            h4 Cloud vs lokální úložiště
+            p.
+                Našim zákazníkům nabízíme možnost provozovat SIMS spřipojením na náš cloudový server (SIMSWEB.CZ) nebo lokálně na svém serveru.
+                Stejně tak služby (produktu Eniterm) můžou být instalovány na našem komunikačním serveru (SIMSWEB.EU) nebo na serveru zákazníka.
+            p.
+                Výhodou provozu SIMS na našem cloudovém serveru je, že zákazník si nemusí pořizovat vlastní server s licencí Microsoft
+                SQL Server a nemusí se starat o správu a údržbu databáze. Na cloud serveru má zákazník také k dispozici webovou aplikaci (produkt SIMS Web).
+            p.
+                Ideální variantou je mít jeden server jako hlavní a druhý používat jako záložní a zprávy zapisovat na oba servery současně.
+                V případě výpadku jednoho ze serverů není zákazník nějak omezen a pracuje nerušeně dál na druhém serveru.
+
+        // Eniterm
+
+        h2#eniterm Eniterm
+
+        p.
+            Eniterm je aplikace pomocí které se instalují, konfigurují a spouští služby, které přijímají zprávy z elektronických bezpečnostních zařízení střežených objektů.
+            Eniterm obsahuje ovladače téměř všech nejčastěji používaných bezpečnostních systémů a komunikátorů. Díky tomu jsme schopni přijímat zprávy ze zařízení různých výrobců.
+
+        // Contact
+
+        h2#contact Kontakt
+
+        boxes
+            box
+                p SW SIMS safety, s.r.o.
+            box 
                 p 
                     b IČO
                     span 28648803
-            .box
+            box
                 p 
                     b Schránka
                     span zw9x6cy
-            .box
+            box
                 p 
                     b Adresa
                     address
                         span Na Výsluní 477
                         span 783 61 Hlubočky
-            .box
+            box
                 p 
                     b E-mail
                     a(href="mailto:info@sims.cz") info@sims.cz
-            .box
+            box
                 p 
                     b Telefon
                     a(href="tel:+420602748687") +420&nbsp;602&nbsp;748&nbsp;687
-            .box
-                p 
-                    b
-                        a(href="principles.html") Principles of personal data processing
+
+        footer 
+            p 
+                a(href="principles.html") Principles of personal data processing
+            p 
+                span#copyright 
+                span &ensp;© SIMS SW s.r.o
+                <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>

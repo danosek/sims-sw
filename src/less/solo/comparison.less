@@ -1,0 +1,34 @@
+@import (reference) "../index.less";
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    
+    th,
+    td {
+        padding: 0.5rem 0.75rem;
+    }
+
+    th {
+        .heading-l();
+    }
+
+    td {
+        border: 2px solid var(--text-primary-color);
+
+        &:first-child {
+            //.heading-base();
+        }
+
+        &:not(:first-child) {
+            text-align: center;
+            inline-size: 9rem;
+            color: var(--primary);
+        }
+
+        &[colspan] {
+            padding-block: 1rem;
+            border-inline-color: transparent;
+        }
+    }
+}
