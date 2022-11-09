@@ -6,18 +6,19 @@
     .heading-xl();
     //font-weight: 400;
     font-feature-settings: normal;
-    max-inline-size: 35ch;
+    max-inline-size: 45ch;
     // border-block-start:  8px solid var(--primary--40);
     //border: 0.2em solid;
-    margin-block: 1em;
-    padding: 2em;
+    margin-block-start: 0;
+    margin-block-end: 1rem;
+    //padding: 2em;
     border-radius: 2em 0 2em 0;
     //border-radius: 0 2em 0 2em;
     //background-color: var(--primary--30);
     line-height: 1.7;
     word-spacing: 0.15ch;
-    border: 0.2em solid;
-    box-shadow: inset 0 0 0 0.2em var(--site-bg),inset 0 0 0 0.4em var(--primary);  
+    // border: 0.2em solid;
+    // box-shadow: inset 0 0 0 0.2em var(--site-bg),inset 0 0 0 0.4em var(--primary);  
 }   
 
 h2 {
@@ -38,9 +39,9 @@ h2 {
 
 h2 ~ p {
     .font-l();
-    max-inline-size: 40ch;
+    max-inline-size: 55ch;
     line-height: 1.7;
-    margin-block-end: 3em;
+    margin-block-end: 2em;
 }
 
 products {
@@ -53,11 +54,7 @@ products {
 }
 
 product {
-    // border-width: 0.2em;
-    // border-style: solid;
-    //border-color: var(--primary--40);
-    // padding: clamp(1rem, 10vw, 3rem);
-    // border-radius: 2em 0 2em 0;
+    .box-with-glow();
 
     h3 {
         margin: 0;
@@ -83,7 +80,7 @@ product-comparison {
     &::after {
         content: "";
         display: inline-block;
-        border-color: var(--primary);
+        border-color: var(--text-primary-color);
         border-style: solid;
         border-width: 0;
         border-block-end-width: 2px;
@@ -171,21 +168,17 @@ boxes {
     margin-inline: auto;
     gap: clamp(1rem, 3vw, 2rem);
     margin-block-start: clamp(1rem, 3vw, 3rem);
-    padding: 2em clamp(2em, 10vw, 8em) 2em 2em;
-    border-radius: 2em 0 2em 0;
-    .font-xl();
-    border: 0.2em solid;
-    box-shadow: inset 0 0 0 0.2em var(--site-bg),inset 0 0 0 0.4em var(--primary); 
+    .box-with-glow();
 }
 
 box {
+    //.font-l();
     //border-radius: var(--radius-3x);
     display: inline-flex;
     //padding: clamp(1rem, 3vw, 3rem);
     margin: 0;
     flex-direction: column;
     gap: 0.2rem;
-    .font-l();
 
     &:first-child p {
         .font-xl();

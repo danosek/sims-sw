@@ -1,6 +1,15 @@
 @dark:     ~"(prefers-color-scheme: dark)";
 @light:    ~"(prefers-color-scheme: light)";
 
+.box-with-glow() {
+    border-width: 0.2em;
+    border-style: solid;
+    border-color: var(--primary);
+    padding: clamp(1rem, 10vw, 3rem);
+    border-radius: 2em;
+    box-shadow: 0 1rem 2rem -0.5rem var(--primary--20), 0 2rem 4rem -1.5rem var(--primary--10);
+}
+
 @import "_includes/_colors-palette.less";
 @import "_includes/_colors-palette-css.less";
 @import "_includes/_colors-branding.less";

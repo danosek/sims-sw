@@ -5,14 +5,12 @@
   letter-spacing: -0.03ch;
   font-feature-settings: var(--heading-features);
   font-feature-settings: normal;
-  max-inline-size: 35ch;
-  margin-block: 1em;
-  padding: 2em;
+  max-inline-size: 45ch;
+  margin-block-start: 0;
+  margin-block-end: 1rem;
   border-radius: 2em 0 2em 0;
   line-height: 1.7;
   word-spacing: 0.15ch;
-  border: 0.2em solid;
-  box-shadow: inset 0 0 0 0.2em var(--site-bg), inset 0 0 0 0.4em var(--primary);
 }
 h2 {
   margin-block-start: 1.5em;
@@ -22,9 +20,9 @@ h2 {
 h2 ~ p {
   font-size: var(--font-size-l);
   font-weight: var(--text-weight);
-  max-inline-size: 40ch;
+  max-inline-size: 55ch;
   line-height: 1.7;
-  margin-block-end: 3em;
+  margin-block-end: 2em;
 }
 products {
   display: grid;
@@ -34,6 +32,14 @@ products {
   products {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+product {
+  border-width: 0.2em;
+  border-style: solid;
+  border-color: var(--primary);
+  padding: clamp(1rem, 10vw, 3rem);
+  border-radius: 2em;
+  box-shadow: 0 1rem 2rem -0.5rem var(--primary--20), 0 2rem 4rem -1.5rem var(--primary--10);
 }
 product h3 {
   margin: 0;
@@ -56,7 +62,7 @@ product-comparison::before,
 product-comparison::after {
   content: "";
   display: inline-block;
-  border-color: var(--primary);
+  border-color: var(--text-primary-color);
   border-style: solid;
   border-width: 0;
   border-block-end-width: 2px;
@@ -131,20 +137,18 @@ boxes {
   margin-inline: auto;
   gap: clamp(1rem, 3vw, 2rem);
   margin-block-start: clamp(1rem, 3vw, 3rem);
-  padding: 2em clamp(2em, 10vw, 8em) 2em 2em;
-  border-radius: 2em 0 2em 0;
-  font-size: var(--font-size-xl);
-  font-weight: var(--text-weight);
-  border: 0.2em solid;
-  box-shadow: inset 0 0 0 0.2em var(--site-bg), inset 0 0 0 0.4em var(--primary);
+  border-width: 0.2em;
+  border-style: solid;
+  border-color: var(--primary);
+  padding: clamp(1rem, 10vw, 3rem);
+  border-radius: 2em;
+  box-shadow: 0 1rem 2rem -0.5rem var(--primary--20), 0 2rem 4rem -1.5rem var(--primary--10);
 }
 box {
   display: inline-flex;
   margin: 0;
   flex-direction: column;
   gap: 0.2rem;
-  font-size: var(--font-size-l);
-  font-weight: var(--text-weight);
 }
 box:first-child p {
   font-size: var(--font-size-xl);

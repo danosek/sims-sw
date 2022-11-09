@@ -7,7 +7,7 @@ body {
 main {
   inline-size: min(calc(100% - var(--edge)), calc(var(--container-size) - var(--edge)));
   margin-inline: auto;
-  padding-block: clamp(1rem, 3vw, 6rem);
+  padding-block: clamp(1rem, 3vw, 2rem);
 }
 nav {
   display: flex;

@@ -140,10 +140,10 @@
   /* Scale */
   --font-size-s: clamp(0.9rem, 0.7vw, 0.9rem);
   --font-size-base: clamp(1rem, 1.2vw, 1.1rem);
-  --font-size-l: clamp(1.2rem, 1.9vw, 1.5rem);
-  --font-size-xl: clamp(1.4rem, 3.2vw, 2.5rem);
-  --font-size-xxl: clamp(1.7rem, 4.2vw, 4rem);
-  --font-size-xxxl: clamp(2.1rem, 7.5vw, 6rem);
+  --font-size-l: clamp(1.2rem, 1.9vw, 1.4rem);
+  --font-size-xl: clamp(1.4rem, 3.2vw, 2rem);
+  --font-size-xxl: clamp(1.7rem, 4.2vw, 3rem);
+  --font-size-xxxl: clamp(2.1rem, 7.5vw, 5rem);
   --font-size-mega: clamp(2.5rem, 9.8vw, 7.3rem);
   /* Line height */
   --line-height-text: 1.55;
@@ -169,23 +169,23 @@ h6 {
 }
 h1 {
   font-family: var(--font-stack-headings);
-  font-size: var(--font-size-xxxl);
+  font-size: var(--font-size-xxl);
   font-weight: var(--heading-weight);
-  letter-spacing: -0.05ch;
+  letter-spacing: -0.04ch;
   font-feature-settings: var(--heading-features);
 }
 h2 {
   font-family: var(--font-stack-headings);
-  font-size: var(--font-size-xxxl);
+  font-size: var(--font-size-xl);
   font-weight: var(--heading-weight);
-  letter-spacing: -0.05ch;
+  letter-spacing: -0.03ch;
   font-feature-settings: var(--heading-features);
 }
 h3 {
   font-family: var(--font-stack-headings);
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-l);
   font-weight: var(--heading-weight);
-  letter-spacing: -0.03ch;
+  letter-spacing: -0.015ch;
   font-feature-settings: var(--heading-features);
 }
 h4 {
@@ -219,7 +219,7 @@ html {
   color-scheme: dark light;
   min-inline-size: 320px;
   letter-spacing: 0.01em;
-  font-size: 17px;
+  font-size: 16px;
 }
 body {
   font-size: var(--font-size-base);
@@ -272,7 +272,7 @@ body {
 main {
   inline-size: min(calc(100% - var(--edge)), calc(var(--container-size) - var(--edge)));
   margin-inline: auto;
-  padding-block: clamp(1rem, 3vw, 6rem);
+  padding-block: clamp(1rem, 3vw, 2rem);
 }
 nav {
   display: flex;
