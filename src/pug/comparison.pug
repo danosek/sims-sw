@@ -1,7 +1,7 @@
 extends _templates/layout.pug
 
 block prepend title
-    title Porovnání - SW SIMS safety
+    title SW SIMS safety - Porovnání edicí SIMS
 
 block append styles
     link(rel="stylesheet" type="text/css" href="css/comparison.css")
@@ -11,7 +11,7 @@ block content
         header 
             nav
                 a(href="./index.html")
-                    img.logo(src="./img/logo-with-text.svg")
+                    img.logo(src="./img/logo.png")
                 a(href="./index.html") ↩ Zpět domů
 
         h1 Porovnání edicí SIMS
@@ -146,5 +146,5 @@ block content
             a(href="principles.html") Principles of personal data processing
         p 
             span#copyright 
-            span &ensp;© SIMS SW s.r.o
+            span &ensp;© SW SIMS safety s.r.o
             <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>

@@ -1,19 +1,16 @@
 .company-intro {
-  font-family: var(--font-stack-headings);
-  font-size: var(--font-size-xl);
-  font-weight: var(--heading-weight);
-  letter-spacing: -0.03ch;
-  font-feature-settings: var(--heading-features);
+  font-size: var(--font-size-s);
+  font-weight: var(--text-weight);
   font-feature-settings: normal;
   max-inline-size: 45ch;
   margin-block-start: 0;
   margin-block-end: 1rem;
-  border-radius: 2em 0 2em 0;
+  color: var(--text-secondary-color);
   line-height: 1.7;
   word-spacing: 0.15ch;
 }
 h2 {
-  margin-block-start: 1.5em;
+  margin-block-start: 1em;
   margin-block-end: 1rem;
   line-height: 1;
 }
@@ -26,9 +23,9 @@ h2 ~ p {
 }
 products {
   display: grid;
-  gap: clamp(1rem, 4vw, 3rem);
+  gap: clamp(1rem, 4vw, 1.5rem);
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1100px) {
   products {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -37,7 +34,7 @@ product {
   border-width: 0.2em;
   border-style: solid;
   border-color: var(--primary);
-  padding: clamp(1rem, 10vw, 3rem);
+  padding: clamp(1rem, 10vw, 2rem);
   border-radius: 2em;
   box-shadow: 0 1rem 2rem -0.5rem var(--primary--20), 0 2rem 4rem -1.5rem var(--primary--10);
 }
@@ -140,7 +137,7 @@ boxes {
   border-width: 0.2em;
   border-style: solid;
   border-color: var(--primary);
-  padding: clamp(1rem, 10vw, 3rem);
+  padding: clamp(1rem, 10vw, 2rem);
   border-radius: 2em;
   box-shadow: 0 1rem 2rem -0.5rem var(--primary--20), 0 2rem 4rem -1.5rem var(--primary--10);
 }

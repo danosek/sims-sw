@@ -1,7 +1,7 @@
 extends _templates/layout.pug
 
 block prepend title
-    title SW SIMS safety
+    title SW SIMS safety - domovská stránka
 
 block append styles
     link(rel="stylesheet" type="text/css" href="css/homepage.css")
@@ -14,7 +14,7 @@ block content
         header 
             nav
                 a(href="./index.html")
-                    img.logo(src="./img/logo-with-text.svg")
+                    img.logo(src="./img/logo.png")
                 a(href="#sims") SIMS
                 a(href="#eniterm") Eniterm
                 a(href="#contact") Kontakt
@@ -112,5 +112,5 @@ block content
                 a(href="principles.html") Principles of personal data processing
             p 
                 span#copyright 
-                span &ensp;© SIMS SW s.r.o
+                span &ensp;© SW SIMS safety s.r.o
                 <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
