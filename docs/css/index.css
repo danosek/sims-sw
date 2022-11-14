@@ -219,7 +219,7 @@ html {
   color-scheme: dark light;
   min-inline-size: 320px;
   letter-spacing: 0.01em;
-  font-size: 16px;
+  font-size: 15px;
 }
 body {
   font-size: var(--font-size-base);

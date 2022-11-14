@@ -12,18 +12,29 @@ table td {
 }
 table th {
   font-family: var(--font-stack-headings);
-  font-size: var(--font-size-l);
+  font-size: var(--font-size-base);
   font-weight: var(--heading-weight);
-  letter-spacing: -0.015ch;
+  letter-spacing: -0.01ch;
   font-feature-settings: var(--heading-features);
 }
+table tr {
+  position: relative;
+  z-index: 0;
+  border-block-end: 1px dashed var(--divider);
+}
+table thead tr {
+  border-block-end-style: solid;
+  border-block-end-color: currentColor;
+}
 table td {
-  border: 2px solid var(--text-primary-color);
+  padding: 0.5rem 0;
 }
 table td:not(:first-child) {
   text-align: center;
   inline-size: 9rem;
-  color: var(--primary);
+  color: var(--primary--60);
+  text-shadow: 0 2px 4px var(--primary--20), 0 4px 8px var(--primary--10);
+  font-size: smaller;
 }
 table td[colspan] {
   padding-block: 1rem;
