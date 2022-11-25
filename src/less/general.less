@@ -11,17 +11,31 @@ body {
 main {
     inline-size: ~"min(calc(100% - var(--edge)), calc(var(--container-size) - var(--edge)))";
     margin-inline: auto;
-    padding-block: clamp(1rem, 3vw, 2rem);
+}
+
+header {
+    position: sticky;
+    inset-block-start: 0;
+    -webkit-backdrop-filter: blur(30px) saturate(150%);
+    backdrop-filter: blur(30px) saturate(150%);
+    background-color: hsla(0, 0%, 100%, 0.7);
+    z-index: 10;
 }
 
 nav {
     display: flex;
     flex-direction: column;
-    gap: 0.5em;
+    gap: 0.5rem;
+    inline-size: ~"min(calc(100% - var(--edge)), calc(var(--container-size) - var(--edge)))";
+    margin-inline: auto;
+    border-block-end: 1px solid var(--divider);
+    padding-block-end: 1rem;
 
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 400px) {
         flex-direction: row;
-        gap: 1em;
+        gap: 1rem;
+        align-items: center;
+        padding-block-end: 0;
 
         a:first-child {
             margin-inline-end: auto;
@@ -37,7 +51,6 @@ nav {
 
 .logo {
     inline-size: clamp(128px, 18vw, 160px);
-    margin-block-end: clamp(1rem, 3vw, 3rem);
 
     @media screen and (min-width: 800px) {
         margin-inline-end: auto;
@@ -58,3 +71,22 @@ footer {
         color: inherit
     }
 }
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  .visuallyhidden.focusable:active,
+  .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+  }

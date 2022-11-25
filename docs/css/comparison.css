@@ -32,13 +32,31 @@ table td {
 table td:not(:first-child) {
   text-align: center;
   inline-size: 9rem;
-  color: var(--primary--60);
   text-shadow: 0 2px 4px var(--primary--20), 0 4px 8px var(--primary--10);
+  color: var(--primary--60);
   font-size: smaller;
 }
 table td[colspan] {
   padding-block: 1rem;
   border-inline-color: transparent;
+}
+dl {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  margin-inline: auto;
+  margin-block-start: 2rem;
+  inline-size: fit-content;
+}
+dt {
+  color: var(--primary--60);
+  font-size: smaller;
+}
+dd {
+  margin-inline-start: 0;
+}
+dd + dt {
+  margin-inline-start: 1rem;
 }
 
 /*# sourceMappingURL=comparison.css.map */

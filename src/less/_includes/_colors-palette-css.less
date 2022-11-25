@@ -10,17 +10,37 @@
     --alpha-5 : 0.8;
     --alpha: 1;
 
+    --red--base:    ~"@{fifty__red--base}";
     --orange--base: ~"@{fifty__orange--base}";
+    --amber--base:  ~"@{fifty__amber--base}";
     --indigo--base: ~"@{fifty__indigo--base}";
     --blue--base:   ~"@{fifty__blue--base}";
-    --green--base: ~"@{fifty__green--base}";
+    --green--base:  ~"@{fifty__green--base}";
 
     @media @light {
+        --red--base:    ~"@{sixty__red--base}";
         --orange--base: ~"@{sixty__orange--base}";
+        --amber--base:  ~"@{sixty__amber--base}";
         --indigo--base: ~"@{sixty__indigo--base}";
         --blue--base:   ~"@{sixty__blue--base}";
         --green--base:  ~"@{sixty__green--base}";
     }
+
+    // Red
+
+    --red: ~"hsl(var(--red--base))";
+	--red-a: ~"hsl(var(--red--base) / var(--alpha))";
+
+    --red--10 : @red--10;
+    --red--20 : @red--20;
+    --red--30 : @red--30;
+    --red--40 : @red--40;
+    --red--50 : @red--50;
+    --red--60 : @red--60;
+    --red--70 : @red--70;
+    --red--80 : @red--80;
+    --red--90 : @red--90;
+    --red--100: @red--100;
 
     // Orange
 
@@ -37,6 +57,22 @@
     --orange--80 : @orange--80;
     --orange--90 : @orange--90;
     --orange--100: @orange--100;
+
+    // Amber
+
+    --amber: ~"hsl(var(--amber--base))";
+	--amber-a: ~"hsl(var(--amber--base) / var(--alpha))";
+
+    --amber--10 : @amber--10;
+    --amber--20 : @amber--20;
+    --amber--30 : @amber--30;
+    --amber--40 : @amber--40;
+    --amber--50 : @amber--50;
+    --amber--60 : @amber--60;
+    --amber--70 : @amber--70;
+    --amber--80 : @amber--80;
+    --amber--90 : @amber--90;
+    --amber--100: @amber--100;
 
     // indigo
 

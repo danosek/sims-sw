@@ -5,10 +5,24 @@
   --alpha-4: 0.6;
   --alpha-5: 0.8;
   --alpha: 1;
+  --red--base: 0 78% 62%;
   --orange--base: 28 90% 55%;
+  --amber--base: 42 95% 60%;
   --indigo--base: 230 90% 66%;
   --blue--base: 212 100% 60%;
   --green--base: 145 54% 55%;
+  --red: hsl(var(--red--base));
+  --red-a: hsl(var(--red--base) / var(--alpha));
+  --red--10: hsl(0, 43%, 97%);
+  --red--20: hsl(0, 48%, 92%);
+  --red--30: hsl(0, 53%, 85%);
+  --red--40: hsl(0, 58%, 73%);
+  --red--50: hsl(0, 78%, 62%);
+  --red--60: hsl(0, 65%, 48%);
+  --red--70: hsl(0, 45%, 34%);
+  --red--80: hsl(0, 45%, 24%);
+  --red--90: hsl(0, 45%, 10%);
+  --red--100: hsl(0, 15%, 4%);
   --orange: hsl(var(--orange--base));
   --orange-a: hsl(var(--orange--base) / var(--alpha));
   --orange--10: hsl(28, 55%, 96%);
@@ -21,6 +35,18 @@
   --orange--80: hsl(28, 72%, 22%);
   --orange--90: hsl(28, 72%, 9%);
   --orange--100: hsl(28, 42%, 4%);
+  --amber: hsl(var(--amber--base));
+  --amber-a: hsl(var(--amber--base) / var(--alpha));
+  --amber--10: hsl(42, 60%, 97%);
+  --amber--20: hsl(42, 65%, 92%);
+  --amber--30: hsl(42, 70%, 84%);
+  --amber--40: hsl(42, 75%, 72%);
+  --amber--50: hsl(42, 95%, 60%);
+  --amber--60: hsl(42, 92%, 49%);
+  --amber--70: hsl(42, 72%, 34%);
+  --amber--80: hsl(42, 72%, 25%);
+  --amber--90: hsl(42, 72%, 10%);
+  --amber--100: hsl(42, 42%, 4%);
   --indigo: hsl(var(--indigo--base));
   --indigo-a: hsl(var(--indigo--base) / var(--alpha));
   --indigo--10: hsl(230, 55%, 97%);
@@ -96,7 +122,9 @@
 }
 @media (prefers-color-scheme: light) {
   :where(:root, *) {
+    --red--base: 0 65% 48%;
     --orange--base: 28 92% 44%;
+    --amber--base: 42 92% 49%;
     --indigo--base: 230 75% 58%;
     --blue--base: 216 91% 59%;
     --green--base: 145 55% 49%;
@@ -272,17 +300,30 @@ body {
 main {
   inline-size: min(calc(100% - var(--edge)), calc(var(--container-size) - var(--edge)));
   margin-inline: auto;
-  padding-block: clamp(1rem, 3vw, 2rem);
+}
+header {
+  position: sticky;
+  inset-block-start: 0;
+  -webkit-backdrop-filter: blur(30px) saturate(150%);
+  backdrop-filter: blur(30px) saturate(150%);
+  background-color: hsla(0, 0%, 100%, 0.7);
+  z-index: 10;
 }
 nav {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 0.5rem;
+  inline-size: min(calc(100% - var(--edge)), calc(var(--container-size) - var(--edge)));
+  margin-inline: auto;
+  border-block-end: 1px solid var(--divider);
+  padding-block-end: 1rem;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 400px) {
   nav {
     flex-direction: row;
-    gap: 1em;
+    gap: 1rem;
+    align-items: center;
+    padding-block-end: 0;
   }
   nav a:first-child {
     margin-inline-end: auto;
@@ -294,7 +335,6 @@ nav a[href] {
 }
 .logo {
   inline-size: clamp(128px, 18vw, 160px);
-  margin-block-end: clamp(1rem, 3vw, 3rem);
 }
 @media screen and (min-width: 800px) {
   .logo {
@@ -313,6 +353,24 @@ footer {
 }
 footer a[href] {
   color: inherit;
+}
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
 }
 
 /*# sourceMappingURL=index.css.map */

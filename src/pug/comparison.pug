@@ -6,13 +6,15 @@ block prepend title
 block append styles
     link(rel="stylesheet" type="text/css" href="css/comparison.css")
         
+block header
+    header 
+        nav
+            a(href="./index.html")
+                img.logo(src="./img/logo.png")
+            a(href="./index.html") ↩ Zpět domů
+
 block content
     main
-        header 
-            nav
-                a(href="./index.html")
-                    img.logo(src="./img/logo.png")
-                a(href="./index.html") ↩ Zpět domů
 
         h1 Porovnání edicí SIMS
 
@@ -141,6 +143,12 @@ block content
                     td ●
                     td ●
                     td 
+        
+        dl 
+            dt ●
+            dd Obsahuje 
+            dt ○
+            dd Obsahuje částečně
     footer 
         p 
             a(href="principles.html") Principles of personal data processing

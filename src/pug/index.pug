@@ -6,24 +6,22 @@ block prepend title
 block append styles
     link(rel="stylesheet" type="text/css" href="css/homepage.css")
 
+block header
+    header 
+        nav
+            a(href="./index.html")
+                img.logo(src="./img/logo.png")
+            a(href="#sims") SIMS
+            a(href="#eniterm") Eniterm
+            a(href="#about") O nás
+            a(href="#contact") Kontakt
+
 block content
     main
 
-        // Header
-
-        header 
-            nav
-                a(href="./index.html")
-                    img.logo(src="./img/logo.png")
-                a(href="#sims") SIMS
-                a(href="#eniterm") Eniterm
-                a(href="#contact") Kontakt
-
-        p.company-intro Jsme česká firma, která se od roku 1991 zabývá vývojem komunikačních služeb a informačních systémů pro monitorování elektronických bezpečnostních zařízení. 
-
         // SIMS
 
-        h2#sims SIMS
+        h2#sims.visuallyhidden  SIMS
 
         p.
             Naším hlavním produktem je Security Information Monitoring System (SIMS), který přijímá zprávy z elektronických bezpečnostních zařízení jako EZS, PZS, bezpečnostní komunikátory a další.
@@ -76,6 +74,12 @@ block content
         p.
             Eniterm je aplikace pomocí které se instalují, konfigurují a spouští služby, které přijímají zprávy z elektronických bezpečnostních zařízení střežených objektů.
             Eniterm obsahuje ovladače téměř všech nejčastěji používaných bezpečnostních systémů a komunikátorů. Díky tomu jsme schopni přijímat zprávy ze zařízení různých výrobců.
+
+        // About
+
+        h2#about O nás
+
+        p.company-intro Jsme česká firma, která se od roku 1991 zabývá vývojem komunikačních služeb a informačních systémů pro monitorování elektronických bezpečnostních zařízení. 
 
         // Contact
 

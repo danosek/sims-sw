@@ -1,18 +1,18 @@
+html {
+  scroll-padding-block-start: 8rem;
+}
 .company-intro {
-  font-size: var(--font-size-s);
-  font-weight: var(--text-weight);
-  font-feature-settings: normal;
   max-inline-size: 45ch;
-  margin-block-start: 0;
-  margin-block-end: 1rem;
-  color: var(--text-secondary-color);
   line-height: 1.7;
   word-spacing: 0.15ch;
 }
 h2 {
-  margin-block-start: 1em;
+  margin-block-start: 3em;
   margin-block-end: 1rem;
   line-height: 1;
+}
+h2:first-of-type {
+  margin-block-start: 0;
 }
 h2 ~ p {
   font-size: var(--font-size-l);
@@ -31,12 +31,35 @@ products {
   }
 }
 product {
+  --box-bg: var(--primary--10);
+  --box-border-color: var(--primary);
+  --box-shadow-color-1: var(--primary--20);
+  --box-shadow-color-2: var(--primary--10);
   border-width: 0.2em;
   border-style: solid;
-  border-color: var(--primary);
+  border-color: var(--box-border-color);
   padding: clamp(1rem, 10vw, 2rem);
   border-radius: 2em;
-  box-shadow: 0 1rem 2rem -0.5rem var(--primary--20), 0 2rem 4rem -1.5rem var(--primary--10);
+  background-color: var(--box-bg);
+  box-shadow: 0 1rem 2rem -0.5rem var(--box-shadow-color-1), 0 2rem 4rem -1.5rem var(--box-shadow-color-2);
+}
+product:nth-of-type(1) {
+  --box-bg: var(--red--10);
+  --box-border-color: var(--red);
+  --box-shadow-color-1: var(--red--20);
+  --box-shadow-color-2: var(--red--10);
+}
+product:nth-of-type(2) {
+  --box-bg: var(--amber--10);
+  --box-border-color: var(--amber);
+  --box-shadow-color-1: var(--amber--20);
+  --box-shadow-color-2: var(--amber--10);
+}
+product:nth-of-type(3) {
+  --box-bg: var(--green--10);
+  --box-border-color: var(--green);
+  --box-shadow-color-1: var(--green--20);
+  --box-shadow-color-2: var(--green--10);
 }
 product h3 {
   margin: 0;
@@ -59,7 +82,7 @@ product-comparison::before,
 product-comparison::after {
   content: "";
   display: inline-block;
-  border-color: var(--text-primary-color);
+  border-color: var(--divider);
   border-style: solid;
   border-width: 0;
   border-block-end-width: 2px;
@@ -115,31 +138,22 @@ cloud-vs-local h4 {
 cloud-vs-local p {
   line-height: 1.5;
   color: var(--text-secondary-color);
+  max-inline-size: 40ch;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 140ch) {
   cloud-vs-local {
-    grid-template-columns: 1fr repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
   }
   cloud-vs-local h4 {
     white-space: nowrap;
   }
 }
-#contact {
-  text-align: center;
-}
 boxes {
   display: grid;
   inline-size: fit-content;
-  margin-inline: auto;
   gap: clamp(1rem, 3vw, 2rem);
   margin-block-start: clamp(1rem, 3vw, 3rem);
-  border-width: 0.2em;
-  border-style: solid;
-  border-color: var(--primary);
-  padding: clamp(1rem, 10vw, 2rem);
-  border-radius: 2em;
-  box-shadow: 0 1rem 2rem -0.5rem var(--primary--20), 0 2rem 4rem -1.5rem var(--primary--10);
 }
 box {
   display: inline-flex;

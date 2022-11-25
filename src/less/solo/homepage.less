@@ -1,34 +1,20 @@
 @import (reference) "../index.less";
 
+
 // *** Homeage ***
 
+html {
+    scroll-padding-block-start: 8rem;
+}
+
 .company-intro {
-    .font-s();
-    //font-weight: 400;
-    font-feature-settings: normal;
     max-inline-size: 45ch;
-    //border: 0.2em solid;
-    margin-block-start: 0;
-    margin-block-end: 1rem;
-    // margin-inline: auto;
-    // text-align: center;
-    color: var(--text-secondary-color);
-    // border-width: 2px 0 0 2px;
-    // border-style: solid;
-    // border-color: var(--divider);
-    // padding-block-start: 2em;
-    // padding-inline-start: 2em;
-    // border-radius: 2em 0 2em 0;
-    //border-radius: 0 2em 0 2em;
-    //background-color: var(--primary--30);
     line-height: 1.7;
     word-spacing: 0.15ch;
-    // border: 0.2em solid;
-    // box-shadow: inset 0 0 0 0.2em var(--site-bg),inset 0 0 0 0.4em var(--primary);  
 }   
 
 h2 {
-    margin-block-start: 1em;
+    margin-block-start: 3em;
     margin-block-end: 1rem;
     // text-decoration-thickness: 0.1em;
     // text-decoration-line: overline;
@@ -41,6 +27,10 @@ h2 {
     //     color: var(--primary--50);
     //     font-weight: 900;
     // }
+
+    &:first-of-type {
+        margin-block-start: 0;
+    }
 }
 
 h2 ~ p {
@@ -61,6 +51,27 @@ products {
 
 product {
     .box-with-glow();
+
+    &:nth-of-type(1) {
+        --box-bg:             var(--red--10);
+        --box-border-color:   var(--red);
+        --box-shadow-color-1: var(--red--20);
+        --box-shadow-color-2: var(--red--10);
+    }
+
+    &:nth-of-type(2) {
+        --box-bg:             var(--amber--10);
+        --box-border-color:   var(--amber);
+        --box-shadow-color-1: var(--amber--20);
+        --box-shadow-color-2: var(--amber--10);
+    }
+
+    &:nth-of-type(3) {
+        --box-bg:             var(--green--10);
+        --box-border-color:   var(--green);
+        --box-shadow-color-1: var(--green--20);
+        --box-shadow-color-2: var(--green--10);
+    }
 
     h3 {
         margin: 0;
@@ -86,7 +97,7 @@ product-comparison {
     &::after {
         content: "";
         display: inline-block;
-        border-color: var(--text-primary-color);
+        border-color: var(--divider);
         border-style: solid;
         border-width: 0;
         border-block-end-width: 2px;
@@ -147,10 +158,11 @@ cloud-vs-local {
     p {
         line-height: 1.5;
         color: var(--text-secondary-color);
+        max-inline-size: 40ch;
     }
 
-    @media screen and (min-width: 1280px) {
-        grid-template-columns: 1fr repeat(3, 1fr);
+    @media screen and (min-width: 140ch) {
+        grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
 
         h4 {
@@ -160,7 +172,7 @@ cloud-vs-local {
 }
 
 #contact {
-    text-align: center;
+    //text-align: center;
     //.heading-xl();
     //margin-block-start: clamp(2em, 10vw, 10em);
 }
@@ -171,10 +183,10 @@ boxes {
     //grid-auto-rows: 15ch;
     //justify-content: center;
     inline-size: fit-content;
-    margin-inline: auto;
+    //margin-inline: auto;
     gap: clamp(1rem, 3vw, 2rem);
     margin-block-start: clamp(1rem, 3vw, 3rem);
-    .box-with-glow();
+    //.box-with-glow();
 }
 
 box {
