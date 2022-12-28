@@ -2,17 +2,19 @@
 @light:    ~"(prefers-color-scheme: light)";
 
 .box-with-glow() {
-    --box-bg: var(--primary--10);
-    --box-border-color: var(--primary);
-    --box-shadow-color-1: var(--primary--20);
+    --box-bg: var(--primary--40);
+    --box-bg-2: var(--primary--60);
+    --box-border-color: white;
+    --box-shadow-color-1: var(--primary--30);
     --box-shadow-color-2: var(--primary--10);
-    border-width: 0.2em;
+    border-width: 0.5rem;
     border-style: solid;
     border-color: var(--box-border-color);
     padding: clamp(1rem, 10vw, 2rem);
     border-radius: 2em;
-    background-color: var(--box-bg);
-    box-shadow: 0 1rem 2rem -0.5rem var(--box-shadow-color-1), 0 2rem 4rem -1.5rem var(--box-shadow-color-2);
+    background-image: linear-gradient(-0.6turn, var(--box-bg-2), var(--box-bg) 30%);
+    box-shadow: 0 1rem 2rem -0.25rem var(--box-shadow-color-1), 0 2rem 4rem -1.5rem var(--box-shadow-color-2);
+    color: var(--text-primary-color);
 }
 
 @import "_includes/_colors-palette.less";

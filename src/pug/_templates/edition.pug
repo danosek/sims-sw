@@ -1,0 +1,70 @@
+//- edition.pug
+
+doctype html
+
+block variables
+
+  - var editionName = "SIMS Standard"
+  - var editionImg = "mockup-standard.png"
+  - var editionDesc = "Komplexní monitorovací systém určený pro bezpečnostní agentury, které připojují na PCO (pulty centrální ochrany) stovky až tisíce střežených objektů. Díky jednoduchému ovládání a propracovanému systému dokáže operátor velice rychle odbavovat přijaté poplachy, které se třídí dle jejich významu. Systém disponuje množstvím funkcionalit, které usnadňují práci operátorům, ale i vedoucím pracovníkům. "
+
+html(lang="cs")
+  head
+
+    block title
+      title SW SIMS safety - #{editionName}
+
+    block meta
+      meta(charset="utf-8")
+      meta(name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
+      meta(http-equiv="X-UA-Compatible" content="IE=edge")
+      meta(name="description" content="Jsme česká firma, která se od roku 1991 zabývá vývojem komunikačních služeb a informačních systémů pro monitorování elektronických bezpečnostních zařízení. ")
+      meta(name="author" content="SW SIMS safety, s.r.o.")
+      meta(property="og:site_name" content="SW SIMS safety, s.r.o.")
+      meta(property="og:title" content="SW SIMS safety, s.r.o.")
+      meta(property="og:description" content="Jsme česká firma, která se od roku 1991 zabývá vývojem komunikačních služeb a informačních systémů pro monitorování elektronických bezpečnostních zařízení. ")
+      meta(property="og:url" content="https://danosek.github.io/sims-sw/")
+      meta(property="og:image" content="https://danosek.github.io/sims-sw/img/logo-with-text.svg")
+      meta(property="og:image:width" content="1201")
+      meta(property="og:image:height" content="630")
+      meta(name="color-scheme" content="dark light")
+      link(rel="icon" href="img/favicon.svg" type="image/svg+xml")
+      link(rel="icon" href="../img/favicon-lt.svg" type="image/svg+xml" media="(prefers-color-scheme: light)")
+      link(rel="icon" href="../img/favicon.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)")
+      link(rel="mask-icon" href="../img/favicon.svg" type="image/svg+xml" color="#F48525" media="(prefers-color-scheme: light)")
+      link(rel="mask-icon" href="../img/favicon.svg" type="image/svg+xml" color="#D76909" media="(prefers-color-scheme: dark)")
+
+    block styles
+      link(rel="stylesheet" type="text/css" href="css/index.css")
+      link(rel="stylesheet" type="text/css" href="css/edition.css")
+
+    block scripts
+
+  body
+
+    block header
+      header
+        nav
+          a(href="./index.html")
+            img.logo(src="./img/logo.png")
+          a(href="./index.html") ↩ Zpět domů
+
+    main
+      block hero
+        hero
+          h1.hero-title= editionName
+          p.hero-text= editionDesc
+          img.hero-image(src=`img/${editionImg}`, alt="")
+
+      block content
+
+
+    block body-scripts
+
+  footer 
+    p 
+      a(href="principles.html") Principles of personal data processing
+    p 
+      span#copyright 
+      span &ensp;© SW SIMS safety s.r.o
+      <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>

@@ -1,0 +1,30 @@
+extends _templates/edition.pug
+
+block variables
+
+    - var editionName = "SIMS Web"
+    - var editionImg = "mockup-web.png"
+    - var editionDesc = "Webová aplikace, která poskytuje monitorování střežených objektů. Tento produkt je nejlepší variantou pro dohledy, vrátnice, koncové zákazníky, kteří nepotřebují nic jiného, než zařízení (ideálně PC nebo tablet s připojením k internetu) s webovým prohlížečem. Aplikace běží ve všech podporovaných verzí webových prohlížečů "
+
+
+block content
+    h2 Funkce
+    ul 
+        li Zavádění objektů do systému
+        li Příjem zpráv
+        li Historie a filtr zpráv
+        li Obsluhy poplachových zpráv
+        li Kontakty
+        li Číselné kódy
+        li Poslední známá pozice
+        li Historie polohy
+        li Geo zóny
+        li.partially Střežené objekty (koncová zařízení)
+
+    dl 
+        dt ●
+        dd Obsahuje 
+        dt ○
+        dd Obsahuje částečně
+
+    a(href="comparison.html") Porovnejte s ostatními edicemi SIMS

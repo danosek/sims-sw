@@ -23,51 +23,61 @@ h2 ~ p {
 }
 products {
   display: grid;
-  gap: clamp(1rem, 4vw, 1.5rem);
+  gap: 128px;
+  margin-block-start: 128px;
 }
 @media screen and (min-width: 1100px) {
   products {
     grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1rem, 4vw, 1.5rem);
   }
 }
 product {
-  --box-bg: var(--primary--10);
-  --box-border-color: var(--primary);
-  --box-shadow-color-1: var(--primary--20);
+  --box-bg: var(--primary--40);
+  --box-bg-2: var(--primary--60);
+  --box-border-color: white;
+  --box-shadow-color-1: var(--primary--30);
   --box-shadow-color-2: var(--primary--10);
-  border-width: 0.2em;
+  border-width: 0.5rem;
   border-style: solid;
   border-color: var(--box-border-color);
   padding: clamp(1rem, 10vw, 2rem);
   border-radius: 2em;
-  background-color: var(--box-bg);
-  box-shadow: 0 1rem 2rem -0.5rem var(--box-shadow-color-1), 0 2rem 4rem -1.5rem var(--box-shadow-color-2);
+  background-image: linear-gradient(-0.6turn, var(--box-bg-2), var(--box-bg) 30%);
+  box-shadow: 0 1rem 2rem -0.25rem var(--box-shadow-color-1), 0 2rem 4rem -1.5rem var(--box-shadow-color-2);
+  color: var(--text-primary-color);
+  position: relative;
 }
-product:nth-of-type(1) {
-  --box-bg: var(--red--10);
-  --box-border-color: var(--red);
-  --box-shadow-color-1: var(--red--20);
-  --box-shadow-color-2: var(--red--10);
+product:hover img {
+  transform: scale(1.2) translateY(-8px);
 }
-product:nth-of-type(2) {
-  --box-bg: var(--amber--10);
-  --box-border-color: var(--amber);
-  --box-shadow-color-1: var(--amber--20);
-  --box-shadow-color-2: var(--amber--10);
+product:hover a[href] {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
-product:nth-of-type(3) {
-  --box-bg: var(--green--10);
-  --box-border-color: var(--green);
-  --box-shadow-color-1: var(--green--20);
-  --box-shadow-color-2: var(--green--10);
+product img {
+  position: absolute;
+  inset-inline-start: 0rem;
+  inset-block-start: -128px;
+  block-size: 256px;
+  transition: 0.1s ease-out transform;
 }
 product h3 {
-  margin: 0;
+  margin: 88px 0 0 0;
+}
+product a[href] {
+  color: var(--text-primary-color);
+  text-decoration: none;
+}
+product > a {
+  position: absolute;
+  inset: 0;
 }
 product p {
   line-height: 1.7;
   letter-spacing: 0.04ch;
   margin-block-end: 0;
+  max-inline-size: 45ch;
 }
 product-comparison {
   display: grid;

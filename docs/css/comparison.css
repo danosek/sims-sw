@@ -10,6 +10,10 @@ table th,
 table td {
   padding: 0.5rem 0.75rem;
 }
+table th a[href],
+table td a[href] {
+  color: var(--text-primary-color);
+}
 table th {
   font-family: var(--font-stack-headings);
   font-size: var(--font-size-base);
