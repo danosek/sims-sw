@@ -13,7 +13,7 @@
   --green--base: 145 54% 55%;
   --red: hsl(var(--red--base));
   --red-a: hsl(var(--red--base) / var(--alpha));
-  --red--10: hsl(0, 43%, 97%);
+  --red--10: hsl(0, 43%, 95%);
   --red--20: hsl(0, 48%, 92%);
   --red--30: hsl(0, 53%, 85%);
   --red--40: hsl(0, 58%, 73%);
@@ -25,7 +25,7 @@
   --red--100: hsl(0, 15%, 4%);
   --orange: hsl(var(--orange--base));
   --orange-a: hsl(var(--orange--base) / var(--alpha));
-  --orange--10: hsl(28, 55%, 96%);
+  --orange--10: hsl(28, 55%, 95%);
   --orange--20: hsl(28, 60%, 91%);
   --orange--30: hsl(28, 65%, 82%);
   --orange--40: hsl(28, 70%, 69%);
@@ -37,7 +37,7 @@
   --orange--100: hsl(28, 42%, 4%);
   --amber: hsl(var(--amber--base));
   --amber-a: hsl(var(--amber--base) / var(--alpha));
-  --amber--10: hsl(42, 60%, 97%);
+  --amber--10: hsl(42, 60%, 95%);
   --amber--20: hsl(42, 65%, 92%);
   --amber--30: hsl(42, 70%, 84%);
   --amber--40: hsl(42, 75%, 72%);
@@ -49,7 +49,7 @@
   --amber--100: hsl(42, 42%, 4%);
   --indigo: hsl(var(--indigo--base));
   --indigo-a: hsl(var(--indigo--base) / var(--alpha));
-  --indigo--10: hsl(230, 55%, 97%);
+  --indigo--10: hsl(230, 55%, 96%);
   --indigo--20: hsl(230, 60%, 93%);
   --indigo--30: hsl(230, 65%, 86%);
   --indigo--40: hsl(230, 70%, 76%);
@@ -61,7 +61,7 @@
   --indigo--100: hsl(230, 4%, 5%);
   --blue: hsl(var(--blue--base));
   --blue-a: hsl(var(--blue--base) / var(--alpha));
-  --blue--10: hsl(212, 65%, 97%);
+  --blue--10: hsl(212, 65%, 95%);
   --blue--20: hsl(212, 70%, 92%);
   --blue--30: hsl(212, 75%, 84%);
   --blue--40: hsl(212, 80%, 72%);
@@ -73,7 +73,7 @@
   --blue--100: hsl(216, 13%, 5%);
   --green: hsl(var(--green--base));
   --green-a: hsl(var(--green--base) / var(--alpha));
-  --green--10: hsl(145, 19%, 96%);
+  --green--10: hsl(145, 19%, 95%);
   --green--20: hsl(145, 24%, 91%);
   --green--30: hsl(145, 29%, 82%);
   --green--40: hsl(145, 34%, 69%);
@@ -83,12 +83,12 @@
   --green--80: hsl(145, 35%, 25%);
   --green--90: hsl(145, 35%, 10%);
   --green--100: hsl(145, 5%, 4%);
-  --grey--10: hsl(0, 0%, 98%);
+  --grey--10: hsl(0, 0%, 97%);
   --grey--20: hsl(0, 0%, 95%);
   --grey--30: hsl(0, 0%, 90%);
   --grey--40: hsl(0, 0%, 83%);
-  --grey--50: hsl(0, 0%, 75%);
-  --grey--60: hsl(0, 0%, 25%);
+  --grey--50: hsl(216, 10%, 75%);
+  --grey--60: hsl(216, 20%, 25%);
   --grey--70: hsl(0, 0%, 18%);
   --grey--80: hsl(0, 0%, 13%);
   --grey--90: hsl(0, 0%, 5%);
@@ -137,7 +137,7 @@
   --text-disabled-color: hsl(0 0% 0% / 0.3);
   --divider: hsl(0 0% 0% / 0.15);
   --overlay: hsl(0 0% 0% / 0.1);
-  --site-bg: var(--white);
+  --site-bg: var(--grey--10);
   --secondary: var(--secondary--60);
   --selection-bg: var(--primary--30);
   --card-bg: var(--primary--20);
@@ -167,9 +167,9 @@
 :root {
   /* Scale */
   --font-size-s: clamp(0.9rem, 0.7vw, 0.9rem);
-  --font-size-base: clamp(1rem, 1.2vw, 1.1rem);
-  --font-size-l: clamp(1.2rem, 1.9vw, 1.4rem);
-  --font-size-xl: clamp(1.4rem, 3.2vw, 1.9rem);
+  --font-size-base: clamp(1rem, 1.2vw, 1rem);
+  --font-size-l: clamp(1.2rem, 1.9vw, 1.3rem);
+  --font-size-xl: clamp(1.4rem, 3.2vw, 1.5rem);
   --font-size-xxl: clamp(1.7rem, 4.2vw, 3.5rem);
   --font-size-xxxl: clamp(2.1rem, 7.5vw, 5rem);
   --font-size-mega: clamp(2.5rem, 9.8vw, 7.3rem);
@@ -315,7 +315,6 @@ nav {
   gap: 0.5rem;
   inline-size: min(calc(100% - var(--edge)), calc(var(--container-size) - var(--edge)));
   margin-inline: auto;
-  border-block-end: 1px solid var(--divider);
   padding-block-end: 1rem;
 }
 @media screen and (min-width: 400px) {

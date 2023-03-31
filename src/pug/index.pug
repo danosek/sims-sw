@@ -11,8 +11,7 @@ block header
         nav
             a(href="./index.html")
                 img.logo(src="./img/logo.png")
-            a(href="#sims") SIMS
-            a(href="#eniterm") Eniterm
+            a(href="#products") Produkty
             a(href="#about") O nás
             a(href="#contact") Kontakt
 
@@ -21,43 +20,46 @@ block content
 
         // SIMS
 
-        h2#sims.visuallyhidden  SIMS
+        h2#products  Produkty
 
-        p.
-            Naším hlavním produktem je Security Information Monitoring System (SIMS), který přijímá zprávy z elektronických bezpečnostních zařízení jako EZS, PZS, bezpečnostní komunikátory a další.
-            Zprávy zpracovává a zapisuje do databáze. Zákazník má pak na výběr, který informační systém si pro monitorování zvolí. 
-        
+        p Základem našeho software je nepřetržitý příjem dat ze zabezpečovacích zařízení…
+
         products
 
             product
-                img(src="img/server.svg", alt="Ikona serveru")
+                img(src="img/server.svg" alt="Ikona serveru")
                 h3 
-                    a(href="standard.html") SIMS Standard
+                    a(href="eniterm.html") Eniterm
                 p.
-                    Komplexní monitorovací systém určený pro bezpečnostní agentury, které připojují na PCO (pulty centrální ochrany) stovky až tisíce střežených objektů.
-                    Díky jednoduchému ovládání a propracovanému systému dokáže operátor velice rychle odbavovat přijaté poplachy, které se třídí dle jejich významu.
-                    Systém disponuje množstvím funkcionalit, které usnadňují práci operátorům, ale i vedoucím pracovníkům. 
+                    Disponuje ovladači všech nejčastěji používaných bezpečnostních systémů, komunikátorů a lokátorů. Na základě toho jsme schopni přijímat data ze zařízení téměř všech výrobců. 
+                a(href="eniterm.html")
+
+        p …a zobrazení těchto dat v reálném case pomocí aplikací SIMS.
+
+        products
+
+            product
+                img(src="img/server.svg" alt="Ikona serveru")
+                h3 
+                    a(href="standard.html") SIMS Desktop
+                p.
+                    Komplexní systém pro bezpečnostní agentury připojující na PCO (pult centrální ochrany) libovolný počet střežených objektů.
                 a(href="standard.html")
 
             product
-                img(src="img/web.svg", alt="Ikona počítače")
+                img(src="img/web.svg" alt="Ikona počítače")
                 h3 
                     a(href="web.html") SIMS Web
                 p.
-                    Webová aplikace, která poskytuje monitorování střežených objektů. Tento produkt je nejlepší variantou pro
-                    dohledy, vrátnice, koncové zákazníky, kteří nepotřebují nic jiného, než zařízení (ideálně PC nebo tablet s připojením k internetu)
-                    s webovým prohlížečem. Aplikace běží ve všech podporovaných verzí webových prohlížečů
+                    Jednoduchá intuitivní webová aplikace vhodná například pro správce budov, vrátnice, výjezdové služby nebo pro koncové zákazníky.
                 a(href="web.html")
 
             product
-                img(src="img/mobile.svg", alt="Ikona telefonu")
+                img(src="img/mobile.svg" alt="Ikona telefonu")
                 h3 
                     a(href="mobile.html") SIMS Mobile
                 p.
-                    Mobilní aplikace monitorující elektronická bezpečnostní zařízení s možností ovládat výstupy M2M Easy 2
-                    bezpečnostních komunikátorů ze svého mobilního telefonu nebo tabletu. Tento produkt je ideální variantou pro koncové zákazníky
-                    jako jsou majitelé střežených objektů, kteří chtějí mít svoje objekty pod stálou kontrolou. Nezávisle na tom, jestli mají své
-                    objekty hlídané bezpečnostní agenturou anebo si je pomocí naší aplikace hlídají sami.
+                    Mobilní aplikace vytvořena v moderní technologii React Native s využitím pro koncové zákazníky, výjezdové služby, technické a manažerské pracovníky bezpečnostních agentur a pro ovládání výstupů M2M Easy 2 bezpečnostních komunikátorů. 
                 a(href="mobile.html")
 
         product-comparison
@@ -66,7 +68,7 @@ block content
 
         cloud-vs-local
             h4 Cloud vs lokální úložiště
-            p.
+            p.p-bg.
                 Našim zákazníkům nabízíme možnost provozovat SIMS spřipojením na náš cloudový server (SIMSWEB.CZ) nebo lokálně na svém serveru.
                 Stejně tak služby (produktu Eniterm) můžou být instalovány na našem komunikačním serveru (SIMSWEB.EU) nebo na serveru zákazníka.
             p.
@@ -76,13 +78,6 @@ block content
                 Ideální variantou je mít jeden server jako hlavní a druhý používat jako záložní a zprávy zapisovat na oba servery současně.
                 V případě výpadku jednoho ze serverů není zákazník nějak omezen a pracuje nerušeně dál na druhém serveru.
 
-        // Eniterm
-
-        h2#eniterm Eniterm
-
-        p.
-            Eniterm je aplikace pomocí které se instalují, konfigurují a spouští služby, které přijímají zprávy z elektronických bezpečnostních zařízení střežených objektů.
-            Eniterm obsahuje ovladače téměř všech nejčastěji používaných bezpečnostních systémů a komunikátorů. Díky tomu jsme schopni přijímat zprávy ze zařízení různých výrobců.
 
         // About
 

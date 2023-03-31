@@ -1,20 +1,25 @@
 @dark:     ~"(prefers-color-scheme: dark)";
 @light:    ~"(prefers-color-scheme: light)";
 
-.box-with-glow() {
-    --box-bg: var(--primary--40);
+.box-with-glow(@variant: "default") {
+    --box-bg: white;
     --box-bg-2: var(--primary--60);
     --box-border-color: white;
-    --box-shadow-color-1: var(--primary--30);
-    --box-shadow-color-2: var(--primary--10);
-    border-width: 0.5rem;
-    border-style: solid;
-    border-color: var(--box-border-color);
-    padding: clamp(1rem, 10vw, 2rem);
-    border-radius: 2em;
-    background-image: linear-gradient(-0.6turn, var(--box-bg-2), var(--box-bg) 30%);
-    box-shadow: 0 1rem 2rem -0.25rem var(--box-shadow-color-1), 0 2rem 4rem -1.5rem var(--box-shadow-color-2);
+    --box-shadow-color-1: var(--primary--40);
+    --box-shadow-color-2: var(--primary--20);
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--box-bg);
+    box-shadow: 0px 6px 10px -3px rgba(0,0,0,0.1);
     color: var(--text-primary-color);
+    transition: all 0.1s ease-out;
+
+    & when (@variant = "interactive") {
+        &:hover {
+            box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+        }
+    }
+
 }
 
 @import "_includes/_colors-palette.less";

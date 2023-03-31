@@ -7,46 +7,46 @@ html {
   word-spacing: 0.15ch;
 }
 h2 {
-  margin-block-start: 3em;
-  margin-block-end: 1rem;
   line-height: 1;
-}
-h2:first-of-type {
-  margin-block-start: 0;
+  color: var(--primary);
 }
 h2 ~ p {
   font-size: var(--font-size-l);
   font-weight: var(--text-weight);
   max-inline-size: 55ch;
   line-height: 1.7;
-  margin-block-end: 2em;
+  margin-block: 2em;
 }
 products {
   display: grid;
-  gap: 128px;
-  margin-block-start: 128px;
+  gap: 1rem;
+  margin-block-start: 1rem;
 }
 @media screen and (min-width: 1100px) {
   products {
     grid-template-columns: repeat(3, 1fr);
-    gap: clamp(1rem, 4vw, 1.5rem);
   }
 }
 product {
-  --box-bg: var(--primary--40);
+  --box-bg: white;
   --box-bg-2: var(--primary--60);
   --box-border-color: white;
-  --box-shadow-color-1: var(--primary--30);
-  --box-shadow-color-2: var(--primary--10);
-  border-width: 0.5rem;
-  border-style: solid;
-  border-color: var(--box-border-color);
-  padding: clamp(1rem, 10vw, 2rem);
-  border-radius: 2em;
-  background-image: linear-gradient(-0.6turn, var(--box-bg-2), var(--box-bg) 30%);
-  box-shadow: 0 1rem 2rem -0.25rem var(--box-shadow-color-1), 0 2rem 4rem -1.5rem var(--box-shadow-color-2);
+  --box-shadow-color-1: var(--primary--40);
+  --box-shadow-color-2: var(--primary--20);
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: var(--box-bg);
+  box-shadow: 0px 6px 10px -3px rgba(0, 0, 0, 0.1);
   color: var(--text-primary-color);
+  transition: all 0.1s ease-out;
   position: relative;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  grid-template-columns: 1fr min-content;
+  grid-template-areas: "title img" "text img";
+}
+product:hover {
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 product:hover img {
   transform: scale(1.2) translateY(-8px);
@@ -56,28 +56,31 @@ product:hover a[href] {
   text-decoration-thickness: 2px;
 }
 product img {
-  position: absolute;
-  inset-inline-start: 0rem;
-  inset-block-start: -128px;
-  block-size: 256px;
+  block-size: 100px;
   transition: 0.1s ease-out transform;
+  grid-area: img;
+  margin-block-start: -1rem;
+  margin-inline-end: -1rem;
 }
 product h3 {
-  margin: 88px 0 0 0;
+  margin-block: 0;
+  grid-area: title;
 }
 product a[href] {
   color: var(--text-primary-color);
   text-decoration: none;
 }
 product > a {
-  position: absolute;
-  inset: 0;
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
 }
 product p {
   line-height: 1.7;
   letter-spacing: 0.04ch;
   margin-block-end: 0;
   max-inline-size: 45ch;
+  grid-area: text;
+  color: var(--text-secondary-color);
 }
 product-comparison {
   display: grid;
@@ -122,39 +125,44 @@ product-comparison a:hover {
   color: var(--text-primary-color);
 }
 cloud-vs-local {
-  --cloud-padding: clamp(1rem, 10vw, 3rem);
   display: grid;
   gap: 1rem;
-  margin-block: calc(var(--cloud-padding) * 1);
-  inline-size: fit-content;
+  max-inline-size: 50ch;
   margin-inline: auto;
-  padding: clamp(1rem, 10vw, 3rem);
-  background-color: var(--blue--10);
-  border-radius: 2em;
+  --box-bg: white;
+  --box-bg-2: var(--primary--60);
+  --box-border-color: white;
+  --box-shadow-color-1: var(--primary--40);
+  --box-shadow-color-2: var(--primary--20);
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: var(--box-bg);
+  box-shadow: 0px 6px 10px -3px rgba(0, 0, 0, 0.1);
+  color: var(--text-primary-color);
+  transition: all 0.1s ease-out;
 }
 cloud-vs-local > * {
   margin: 0;
-  font-size: var(--font-size-s);
-  font-weight: var(--text-weight);
 }
 cloud-vs-local h4 {
   inline-size: fit-content;
   font-family: var(--font-stack-headings);
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-base);
   font-weight: var(--heading-weight);
   letter-spacing: -0.01ch;
   font-feature-settings: var(--heading-features);
 }
 cloud-vs-local p {
-  line-height: 1.5;
+  line-height: 1.7;
   color: var(--text-secondary-color);
-  max-inline-size: 40ch;
+}
+cloud-vs-local p.p-bg {
+  background-color: var(--primary--20);
+  color: var(--primary--70);
+  padding: inherit;
+  border-radius: inherit;
 }
 @media screen and (min-width: 140ch) {
-  cloud-vs-local {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-  }
   cloud-vs-local h4 {
     white-space: nowrap;
   }
